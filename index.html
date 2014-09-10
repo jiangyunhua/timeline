@@ -2,18 +2,30 @@
 <head>
 	<title>timeline demo</title>
 	<link rel="stylesheet" type="text/css" href="res/timeline.css">
+	<script rel="" type="text/javascript" src="script/timeline.js"></script>
 	<style type="text/css">
-	body{background:#fff;font-size:14px;}
-	.main{
-		width:1000px;
-		margin:30px auto;
-		border: 1px solid #fff;
-	}
+		body{background:black;font-size:14px;}
+		.main{
+			width:1000px;
+			margin:30px auto;
+			border: 1px solid #fff;
+		}
 	</style>
+	<script type="text/javascript">
+		function ready(){
+			new window.timeLine("ct",2002,2013,[
+				["2002/01","2002/08","测试信息啊"],
+				["2003/01","2003/08","测试信息啊"],
+				["2004/01","2004/08","测试信息啊"],
+				["2005/01","2005/08","测试信息啊"],
+				["2010/01","2013/08","测试信息啊"]
+			]);
+		}
+	</script>
 </head>
-<body>
-	<div class="timeline">
-		<div class="scope">
+<body onload="ready();">
+	<div id="ct" class="timeline">
+		<!--<div class="scope">
 			<section>2002</section>
 			<section>2003</section>
 			<section>2004</section>
@@ -37,7 +49,7 @@
 				<li><div class="bubble bubble-yellow" style="width:32px;margin-left:250px;"></div><label>2002/03-2002/06</label><span class="description">重大事件信息再次发生</span></li>
 				<li><div class="bubble bubble-default" style="width:14px;margin-left:300px;"></div><label>2002/03-2002/06</label><span class="description">重大事件信息再次发生</span></li>
 			</ul>
-		</div>
+		</div>-->
 	</div>
 
 </body>
