@@ -12,11 +12,19 @@
 
 	}
 
+	/**
+	 * 获取时间条对象的宽度
+	 *
+	 */
 	Strip.prototype.getWidth = function(){
 
 	}
 
-	String.prototype.getOffset = function(){
+	/**
+	 * 获取时间条对象距离最小年度的距离
+	 *
+	 */
+	Strip.prototype.getLeftOffset = function(){
 
 	}
 
