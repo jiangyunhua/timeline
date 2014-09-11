@@ -1,12 +1,11 @@
 .timeline{
-	width: 720px;
-    height: 292px;
+	/*width: 720px;
+    height: 292px;*/
+    min-height:292px;
     margin: 0 auto;
-    border-top:1px solid #ccc;
-    border-right:1px dashed #ddd;
     border-top: 1px solid rgba(250, 250, 250, 0.5);
     background-color: rgba(51, 51, 51, 1);
-    background-color:black;
+    border-right:1px dashed rgba(250, 250, 250, 0.2);
     position: relative;
 }
 .scope{
@@ -25,8 +24,7 @@
 	font-size: 13px;
 	line-height: 24px;
 	font-weight: lighter;
-	/*border-left: 1px dashed rgba(250, 250, 250, 0.2);*/
-	border-left:1px dashed #ddd;
+	border-left: 1px dashed rgba(250, 250, 250, 0.2);
 	height: 100%;
 }
 .data{
@@ -52,7 +50,8 @@
 	color:#707070;
 }
 .data .bubble{
-	padding:3px;
+	opacity: .7;
+	padding:4px;
 	border-radius: 3px;
 	display:inline-block;
 	-moz-box-shadow: 0 3px 6px rgba(0,0,0,0.2);

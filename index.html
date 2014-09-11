@@ -3,53 +3,28 @@
 	<title>timeline demo</title>
 	<link rel="stylesheet" type="text/css" href="res/timeline.css">
 	<script rel="" type="text/javascript" src="script/timeline.js"></script>
+	<script rel="" type="text/javascript" src="script/timeline.strip.js"></script>
 	<style type="text/css">
 		body{background:black;font-size:14px;}
-		.main{
-			width:1000px;
-			margin:30px auto;
-			border: 1px solid #fff;
-		}
+		
 	</style>
 	<script type="text/javascript">
 		function ready(){
-			new window.timeLine("ct",2002,2013,[
-				["2002/01","2002/08","测试信息啊"],
-				["2003/01","2003/08","测试信息啊"],
-				["2004/01","2004/08","测试信息啊"],
-				["2005/01","2005/08","测试信息啊"],
-				["2010/01","2013/08","测试信息啊"]
+			new window.timeLine("ct",2002,2026,[
+				["2002/02","2003/09","京华时报报道","red"],
+				["2003/01","2004/08","央视新闻联播报道","green"],
+				["2004/01","2005/08","焦点访谈报道","default"],
+				["2005/01","2006/08","中纪委通报信息","yellow"],
+				["2007/01","2007/08","立案调查‘老虎’","green"],
+				["2008/01","2009/08","腐败关系网曝光","yellow"],
+				["2010/01","2013/08","相关腐败分子落网","green"]
 			]);
 		}
 	</script>
 </head>
 <body onload="ready();">
-	<div id="ct" class="timeline">
-		<!--<div class="scope">
-			<section>2002</section>
-			<section>2003</section>
-			<section>2004</section>
-			<section>2005</section>
-			<section>2006</section>
-			<section>2007</section>
-			<section>2008</section>
-			<section>2009</section>
-			<section>2010</section>
-			<section>2011</section>
-			<section>2012</section>
-			<section>2013</section>
-			<section>2014</section>
-		</div>
-		<div class="data">
-			<ul>
-				<li><div class="bubble bubble-red" style="width:20px;margin-left:50px;"></div><label>2002/03-2002/06</label><span class="description">重大事件信息再次发生</span></li>
-				<li><div class="bubble bubble-default" style="width:30px;margin-left:100px;"></div><label>2002/03-2002/06</label><span class="description">重大事件信息再次发生</span></li>
-				<li><div class="bubble bubble-green" style="width:25px;margin-left:150px;"></div><label>2002/03-2002/06</label><span class="description">重大事件信息再次发生</span></li>
-				<li><div class="bubble bubble-default" style="width:16px;margin-left:200px;"></div><label>2002/03-2002/06</label><span class="description">重大事件信息再次发生</span></li>
-				<li><div class="bubble bubble-yellow" style="width:32px;margin-left:250px;"></div><label>2002/03-2002/06</label><span class="description">重大事件信息再次发生</span></li>
-				<li><div class="bubble bubble-default" style="width:14px;margin-left:300px;"></div><label>2002/03-2002/06</label><span class="description">重大事件信息再次发生</span></li>
-			</ul>
-		</div>-->
+	<div id="ct" class="timeline" style="margin:50px auto;width:80%;">
+		
 	</div>
 
 </body>

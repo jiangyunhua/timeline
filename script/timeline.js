@@ -3,10 +3,10 @@
 
 	/**
 	 * 时间轴对象
-	 * @param container {string} 目标对象id
-	 * @param min {int} 最小年份
-	 * @param max {int} 最大年份
-	 # @param data {Array} 数据
+	 * @param {string} container  目标对象id
+	 * @param {int} min  最小年份
+	 * @param {int} max  最大年份
+	 # @param {Array} data  数据
 	 */
 	var TimeLine = function(container,min,max,data){
 		this.container = "#"+container;
@@ -43,22 +43,37 @@
 	 *
 	 */
 	TimeLine.prototype.fillData = function(){
-		console.log(this.data);
-		console.log(this.year);
+		var i = 0 , 
+			monthWidth = document.querySelector(this.container + " .scope section").offsetWidth / 12,
+			htmls = [],
+			strip = null,
+			temp = null;	
+		for(;i<this.data.length;i++){
+			temp = this.data[i];
+			strip = new window.Strip(monthWidth,this.year.min,this.data[i].start,this.data[i].end);
+			htmls.push("<li>"+
+					  	"<div class='bubble bubble-" + temp.theme + "' style='width:" + strip.getWidth() + "px;margin-left:" + strip.getLeftOffset() + "px;'></div>"+
+					  	"<label>" + temp.start.getFullYear()+"/"+(temp.start.getMonth()+1)+"-"+ temp.end.getFullYear()+"/"+(temp.end.getMonth()+1) + "</label>"+
+					  	"<span class='description'>" + temp.label + "</span>"+
+					  "</li>");
+		}
+		document.querySelector(this.container).innerHTML += "<div class='data'><ul>" + htmls.join("") + "</ul></div>";
 	}
 
 	/**
 	 * 转换字符串为日期类型
 	 */
-	TimeLine.prototype.analyzeDate = function(str){debugger;	
+	TimeLine.prototype.analyzeDate = function(str){
 		var date = null,year = null,month = null;
 		if(str.indexOf("/") > -1){
 			year = parseInt(str.substring(0,str.indexOf("/")));
 			month = parseInt(str.substring(str.indexOf("/")+1,str.length))
 			date = new Date(year,month);
+			date.hasMonth = true;
 		}else{
 			year = parseInt(str);
 			date = new Date(year);
+			date.hasMonth = false;
 		}
 		return date;
 	}
@@ -71,8 +86,9 @@
 		var i = 0;
 		for(;i<data.length;i++){
 			var start = this.analyzeDate(data[i][0]);
-			var end = data[i].length ==3 ? this.analyzeDate(data[i][1]) : null;
-			var label = data[i].length == 3 ? data[i][2] : data[i][1];
+			var end = data[i].length == 4 ? this.analyzeDate(data[i][1]) : null;
+			var label = data[i].length == 4 ? data[i][2] : data[i][1];
+			var theme = data[i].length == 4 ? data[i][3] : data[i][2];
 
 			if(start.getFullYear() < this.year.min){
 				this.year.min = start.getFullYear();
@@ -81,7 +97,7 @@
 				this.year.max = end.getFullYear();
 			}
 
-			this.data.push({"start":start,"end":end,"label":label});
+			this.data.push({"start":start,"end":end,"label":label,"theme":theme});
 		}
 	}
 
