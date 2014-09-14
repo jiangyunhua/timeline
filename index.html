@@ -5,12 +5,49 @@
 	<script rel="" type="text/javascript" src="script/timeline.js"></script>
 	<script rel="" type="text/javascript" src="script/timeline.strip.js"></script>
 	<style type="text/css">
-		body{background:black;font-size:14px;}
-		
+		body{
+			font-size:14px;
+			background: url('http://pic.nipic.com/2007-11-27/2007112715312410_2.jpg') repeat bottom center fixed transparent;
+		}
+		.outer-wrapper{
+			margin:50px auto;
+			width:80%;
+			position: relative;
+			border: none;
+		}
+		.timeline{
+			background: rgba(75, 75, 75, 0.7);
+			padding: 30px 40px;
+			/*filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#E6FFFFFF', endColorstr='#E6FFFFFF');*/
+			z-index: 999999999;
+			-webkit-box-shadow: 0 6px 6px rgba(0,0,0,0.3);
+			-moz-box-shadow: 0 6px 6px rgba(0,0,0,0.3);
+			box-shadow: 0 6px 6px rgba(0,0,0,0.3);
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+			-ms-border-radius: 3px;
+			-o-border-radius: 3px;
+			border-radius: 3px;
+			overflow: hidden;
+			zoom: 1;
+		}
+		.outer-wrapper .blur{
+			height: 100%;
+			width: 100%; /*https://static.licdn.com/scds/common/u/images/apps/uas/splash_signin_v3.jpg*/
+			/*background: url('http://pic.nipic.com/2007-11-27/2007112715312410_2.jpg') no-repeat bottom center fixed transparent;*/
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -1;
+		}
 	</style>
 	<script type="text/javascript">
 		function ready(){
-			new window.timeLine("ct",2002,2026,[
+			new window.timeLine("ct",2002,2014,[
 				["2002/02","2003/09","京华时报报道","red"],
 				["2003/01","2004/08","央视新闻联播报道","green"],
 				["2004/01","2005/08","焦点访谈报道","default"],
@@ -23,9 +60,9 @@
 	</script>
 </head>
 <body onload="ready();">
-	<div id="ct" class="timeline" style="margin:50px auto;width:80%;">
-		
-	</div>
-
+	<div class="outer-wrapper">
+		<div id="ct" class="timeline" style="overflow-x:auto;"></div>
+	<div>
+	<div class="blur"></div>
 </body>
 </html>
