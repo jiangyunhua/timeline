@@ -1,12 +1,46 @@
+.outer-wrapper{
+	margin:50px auto;
+	width:80%;
+	position: relative;
+	border: none;
+}
+.outer-wrapper .blur{
+	height: 100%;
+	width: 100%; /*https://static.licdn.com/scds/common/u/images/apps/uas/splash_signin_v3.jpg*/
+	/*background: url('http://pic.nipic.com/2007-11-27/2007112715312410_2.jpg') no-repeat bottom center fixed transparent;*/
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
 .timeline{
 	/*width: 720px;
     height: 292px;*/
     min-height:292px;
+    overflow-x:auto;
     margin: 0 auto;
     border-top: 1px solid rgba(250, 250, 250, 0.5);
     background-color: rgba(51, 51, 51, 1);
     border-right:1px dashed rgba(250, 250, 250, 0.2);
     position: relative;
+    background: rgba(75, 75, 75, 0.7);
+	padding: 30px 40px;
+	/*filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#E6FFFFFF', endColorstr='#E6FFFFFF');*/
+	z-index: 999999999;
+	-webkit-box-shadow: 0 6px 6px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0 6px 6px rgba(0,0,0,0.3);
+	box-shadow: 0 6px 6px rgba(0,0,0,0.3);
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;
+	overflow: hidden;
+	zoom: 1;
 }
 .scope{
 	height: 100%;
@@ -36,6 +70,7 @@
 }
 .data ul li{
 	list-style: none;
+	white-space: nowrap;
 }
 .data ul li{
 	height:25px;

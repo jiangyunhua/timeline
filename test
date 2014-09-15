@@ -1,0 +1,53 @@
+[33mcommit 1440652cf948f82ca62f6874661b973c6aaf1d10[m
+Author: 陈滔 <tao.chen209@gmail.com>
+Date:   Sun Sep 14 22:03:26 2014 +0800
+
+    样式更改
+    
+    添加了背景图片样式，下次更新将样式嵌入timeline.css
+
+[33mcommit c066bc602b6d88e0bd317d7daf21ecec84998187[m
+Author: 陈滔 <chentaojc@163.com>
+Date:   Fri Sep 12 00:12:53 2014 +0800
+
+    Update README.md
+
+[33mcommit a2cc8d3bc97efbef58c792b2fdee7aec6c1dadd5[m
+Author: 陈滔 <tao.chen209@gmail.com>
+Date:   Thu Sep 11 23:58:24 2014 +0800
+
+    可预览效果版本
+    
+    可预览效果的版本，针对css3的样式还没有应用上，下次更新会加上css3的样式效果
+
+[33mcommit b9572b8ffe69fca97a53174f26ab2aa1f3fb1875[m
+Author: 陈滔 <tao.chen209@gmail.com>
+Date:   Wed Sep 10 23:59:26 2014 +0800
+
+    更新js文件
+
+[33mcommit 6d748647561c21fcd2fea6945adf4ffb70071f75[m
+Author: 陈滔 <tao.chen209@gmail.com>
+Date:   Wed Sep 10 23:55:47 2014 +0800
+
+    添加js
+    
+    更新timeline.js和timeline.strip.js两个文件
+
+[33mcommit b81557a0cee7e2385989d04c645cce39df27fec2[m
+Author: 陈滔 <chentaojc@163.com>
+Date:   Tue Sep 9 23:48:15 2014 +0800
+
+    Create README.md
+
+[33mcommit 0a6d68bc7ae81881a30ec3175508ecb953a88930[m
+Author: 陈滔 <tao.chen209@gmail.com>
+Date:   Tue Sep 9 23:44:20 2014 +0800
+
+    html结构和css
+
+[33mcommit c15882a71dd837e4b849261a8c010d5658bfeef5[m
+Author: 陈滔 <tao.chen209@gmail.com>
+Date:   Tue Sep 9 23:43:47 2014 +0800
+
+    :tada: Added .gitattributes & .gitignore files

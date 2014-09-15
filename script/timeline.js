@@ -35,7 +35,8 @@
 		for( ; i<=this.year.max; i++){
 			htmls.push("<section>"+i+"</section>");
 		}
-		document.querySelector(this.container).innerHTML = "<div class='scope'>"+htmls.join("")+"</div>";
+		document.querySelector(this.container).innerHTML = "<div class='outer-wrapper'><div class='timeline'></div></div><div class='blur'></div>";
+		document.querySelector(this.container+" .timeline").innerHTML = "<div class='scope'>"+htmls.join("")+"</div>";
 	}
 
 	/**
@@ -57,7 +58,7 @@
 					  	"<span class='description'>" + temp.label + "</span>"+
 					  "</li>");
 		}
-		document.querySelector(this.container).innerHTML += "<div class='data'><ul>" + htmls.join("") + "</ul></div>";
+		document.querySelector(this.container+" .timeline").innerHTML += "<div class='data'><ul>" + htmls.join("") + "</ul></div>";
 	}
 
 	/**
